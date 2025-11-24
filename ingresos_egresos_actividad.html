@@ -24,7 +24,7 @@
                         <ul class="submenu">
                             <li><a href="mantenimiento_provincias.html">Provincias</a></li>
                             <li><a href="mantenimiento_cantones.html">Cantones</a></li>
-                            <li><a href="mantenimiento_distritos.html">Distritos</a></li>
+                            <li><a href="mantenimiento_distritos.php">Distritos</a></li>
                             <li><a href="mantenimiento_tipos_actividad.html">Tipos de Actividad</a></li>
                             <li><a href="mantenimiento_socios.html">Registro de Socios</a></li>
                             <li><a href="mantenimiento_tipos_pago.html">Tipos de Pago</a></li>
@@ -43,7 +43,8 @@
                         <ul class="submenu">
                             <li><a href="reporte_socios.html">Reporte de Socios</a></li>
                             <li><a href="reporte_pagos_cuotas.html">Reporte de Pagos de cuotas por Socio</a></li>
-                            <li><a href="reporte_ingresos_egresos.html">Reporte de Ingresos y egresos por Actividad</a></li>
+                            <li><a href="reporte_ingresos_egresos.html">Reporte de Ingresos y egresos por Actividad</a>
+                            </li>
                             <li><a href="recibo_pago.html">Recibo de Pago</a></li>
                         </ul>
                     </li>
@@ -71,7 +72,7 @@
                         <label for="id_transaccion" class="form-label">ID-Transacción</label>
                         <input type="text" class="form-control" id="id_transaccion" value="[Auto]" disabled>
                     </div>
-                    
+
                     <div class="col-md-3">
                         <label for="tipo_transac" class="form-label">Tipo</label>
                         <select class="form-select" id="tipo_transac" name="tipo_transac" required>
@@ -83,7 +84,8 @@
 
                     <div class="col-md-3">
                         <label for="monto_transaccion" class="form-label">Monto</label>
-                        <input type="number" class="form-control" id="monto_transaccion" name="monto_transaccion" step="0.01" min="0" required>
+                        <input type="number" class="form-control" id="monto_transaccion" name="monto_transaccion"
+                            step="0.01" min="0" required>
                     </div>
 
                     <div class="col-md-4">
@@ -97,7 +99,8 @@
 
                     <div class="col-md-3">
                         <label for="tipo_cambio" class="form-label">Tipo de Cambio (si aplica)</label>
-                        <input type="number" class="form-control" id="tipo_cambio" name="tipo_cambio" step="0.0001" min="1" placeholder="Ej. 530.50">
+                        <input type="number" class="form-control" id="tipo_cambio" name="tipo_cambio" step="0.0001"
+                            min="1" placeholder="Ej. 530.50">
                     </div>
 
                     <div class="col-md-4">
@@ -122,12 +125,14 @@
                             <option value="2">Jornada Salud - Franciny Arias (ID Reg: 2)</option>
                             <option value="3">Recolección Víveres - Jean Paul Segura (ID Reg: 3)</option>
                         </select>
-                        <div class="form-text">Asociar un Ingreso/Egreso a una participación de socio en una actividad específica.</div>
+                        <div class="form-text">Asociar un Ingreso/Egreso a una participación de socio en una actividad
+                            específica.</div>
                     </div>
-                    
+
                     <div class="col-12">
                         <label for="detalle_transaccion" class="form-label">Detalle/Concepto de la Transacción</label>
-                        <textarea class="form-control" id="detalle_transaccion" name="detalle_transaccion" rows="2" required></textarea>
+                        <textarea class="form-control" id="detalle_transaccion" name="detalle_transaccion" rows="2"
+                            required></textarea>
                     </div>
                 </div>
 
