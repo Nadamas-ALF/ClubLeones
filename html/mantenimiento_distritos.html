@@ -11,44 +11,65 @@
 
 <body>
     <header>
-        <nav class="navbar-socio">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container d-flex align-items-center justify-content-between">
                 <a class="navbar-brand d-flex align-items-center gap-2" href="menu_socio.html">
-                    <img src="../img/logotibas.png" alt="Logo" style="width: 30px; height: 30px;">
-                    <span class="text-white">Área de Socios</span>
+                    <img src="../img/logotibas.png" alt="Logo Club de Leones de Tibás">
+                    <span>Área de Socios</span>
                 </a>
-                <ul class="menu-principal">
-                    <li><a href="#">Configuración</a>
+
+                <ul class="navbar-nav ms-auto d-flex flex-row gap-3 menu-principal">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Configuración</a>
+
+
                         <ul class="submenu">
                             <li><a href="mantenimiento_provincias.html">Provincias</a></li>
                             <li><a href="mantenimiento_cantones.html">Cantones</a></li>
                             <li><a href="mantenimiento_distritos.html">Distritos</a></li>
                             <li><a href="mantenimiento_tipos_actividad.html">Tipos de Actividad</a></li>
-                            <li><a href="mantenimiento_bancos.html">Bancos</a></li>
                             <li><a href="mantenimiento_socios.html">Registro de Socios</a></li>
+                            <li><a href="mantenimiento_bancos.html">Bancos</a></li>
+                            <li><a href="cuentas_bancarias.html">Cuentas Bancarias</a></li>
                             <li><a href="mantenimiento_tipos_pago.html">Tipos de Pago</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Ingresos/Egresos</a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ingresos/Egresos</a>
                         <ul class="submenu">
+                            <li><a href="ingresos_egresos_actividad.html">Ingresos/Egresos por Actividad</a></li>
                             <li><a href="registro_actividades.html">Registro de Actividades</a></li>
                             <li><a href="actividades_por_socio.html">Actividades por Socio</a></li>
-                            <li><a href="ingresos_egresos_actividad.html">Ingresos/Egresos por actividad</a></li>
+                            <li><a href="transacciones_cuentas.html">Transacciones por Cuenta</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Reportes</a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reportes</a>
                         <ul class="submenu">
                             <li><a href="reporte_socios.html">Reporte de Socios</a></li>
-                            <li><a href="reporte_pagos_cuotas.html">Reporte de Pagos de cuotas por Socio</a></li>
-                            <li><a href="reporte_ingresos_egresos.html">Reporte de Ingresos y egresos por Actividad</a>
-                            </li>
+                            <li><a href="reporte_pagos_cuotas.html">Pagos de Cuotas por Socio</a></li>
+                            <li><a href="reporte_ingresos_egresos.html">Ingresos y Egresos por Actividad</a></li>
                             <li><a href="recibo_pago.html">Recibo de Pago</a></li>
                         </ul>
                     </li>
-                    <li><a href="login.html">Cerrar Sesión</a></li>
+
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Cerrar Sesión</a>
+                    </li>
                 </ul>
             </div>
         </nav>
+
+        <section class="hero">
+            <div class="container">
+                <h1 class="h2 mb-2">Mantenimiento de Distritos</h1>
+                <p class="lead mb-0">Control de Distritos</p>
+            </div>
+        </section>
     </header>
 
     <main class="container my-5">
@@ -58,17 +79,14 @@
             <div class="card-body">
                 <h5 class="card-title text-accent">Registrar Nuevo Distrito</h5>
 
-                <!-- IMPORTANTE: usamos id en el form para capturarlo en JS -->
                 <form id="form-distrito">
                     <div class="row g-3">
-                        <!-- Campo oculto para ID cuando edites (por ahora solo crear) -->
                         <input type="hidden" id="cod_distrito">
 
                         <div class="col-md-3">
                             <label for="id_provincia" class="form-label">Provincia</label>
                             <select id="id_provincia" class="form-select" required>
                                 <option value="" selected disabled>Seleccione...</option>
-                                <!-- Se llena dinámicamente con fetch('../api/provincias.php') -->
                             </select>
                         </div>
 
@@ -76,7 +94,6 @@
                             <label for="id_canton" class="form-label">Cantón</label>
                             <select id="id_canton" class="form-select" required disabled>
                                 <option value="" selected>Seleccione una Provincia primero</option>
-                                <!-- Se llena dinámicamente según la provincia -->
                             </select>
                         </div>
 
@@ -100,10 +117,10 @@
                         <th>ID</th>
                         <th>Cantón</th>
                         <th>Nombre del Distrito</th>
-                        <th>Cod. Postal</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
+
                 <tbody id="tbody-distritos">
                 </tbody>
             </table>
@@ -115,7 +132,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/distritos.js"></script>
+    <script src="/ProtectoLeonesLenguajes/js/distritos.js?v=1"></script>
+
 </body>
 
 </html>
